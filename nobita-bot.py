@@ -36,7 +36,7 @@ from urlparse import urlparse
 
 # Configuracion
 #portList = [21,22,23,25,53,63,80,90,110,143,161,443,500,513,520,559,3306,3389,5000,5050, 5060, 8069,8080, 9443,27017, 28017]
-portList = [80, 443, 8080, 27017]
+portList = [22]
 totalPuertos = len(portList)
 ip_root = ""
 timeout = 3
