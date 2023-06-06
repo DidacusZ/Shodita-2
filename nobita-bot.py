@@ -68,7 +68,8 @@ def banner_grabbing_web(ip_address, port, path='/'):
         banner = str()
         location = None
 
-        if port in [80, 8080, 28017]:
+        #if port in [80, 8080, 28017]:
+        if port in [22]:
             s = socket.socket()
             s.settimeout(timeout)
         elif port == 443:
@@ -179,7 +180,8 @@ def main():
                     pct = str(porcentaje(portList.index(port)))
                     print "|----[!] " + str(ip_address) + " -> " + str(port) + " " + pct + "%"
                     # Obtenemos el mensaje del servidor en el puerto
-                    webport = [80, 8080, 443, 28017]
+                    # webport = [80, 8080, 443, 28017]
+                    webport = [22]
                     if port in webport:
                         Banner = banner_grabbing_web(ip_address, port)
                     elif port == 27017:
