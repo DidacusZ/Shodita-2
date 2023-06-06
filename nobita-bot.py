@@ -184,7 +184,7 @@ def main():
                     webport = [22]
                     if port in webport:
                         Banner = banner_grabbing_web(ip_address, port)
-                    elif port == 22:
+                    elif port == 27017:
                         Banner = banner_grabbing_mongo(ip_address, port)
                     else:
                         Banner = banner_grabbing(ip_address, port)
