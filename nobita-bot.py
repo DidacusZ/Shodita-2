@@ -198,7 +198,7 @@ def main():
                     global _lastlocation
                     _lastlocation = ''
                     #pct = str(porcentaje(portList.index(port)))
-                    pct = "sin porcentaje"
+                    pct = "no hay conexion"
                     print "|----[!] " + str(ip_address) + " -> " + str(port) + " " + pct + "%"
                     # Obtenemos el mensaje del servidor en el puerto
                     # webport = [80, 8080, 443, 28017]
