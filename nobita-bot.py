@@ -181,7 +181,7 @@ def main():
         port = port.strip()
         #hacemos un casting al string para pasarlo a int
         port = int(port)
-        print(port)
+        print(port+100)
         #aniade los int a la lista
         portList.append(port)
 
