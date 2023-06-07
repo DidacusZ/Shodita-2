@@ -33,8 +33,14 @@ db = client.test
 #passwords = ["123456", "root", "admin", "12345", "1234", "password", "qwerty", "1234567", "welcome", "qwerty", "football", "baseball", "1234567890", "anonymous", "abc123"]
 #passwords = ["123456", "root","centos","password", "qwerty"]
 
+#abre el fichero en modo lectura
 fichero = open("dic/password.txt", "r")
+#guarda linea por linea incluyendo el salto de linea
 passwords = fichero.readlines()
+
+#quita los saltos de linea
+for passwords in passwords:
+        passwords = passwords.strip()
 
 class colores:
     HEADER = '\033[95m'
