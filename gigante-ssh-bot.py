@@ -79,7 +79,7 @@ def check_sshBF(ip):
 		try:
 			print colores.verde + "|----[INFO] Try user: root password: " + p + colores.normal
 			ssh.connect(ip, username=user, password=p, timeout=10)
-			print p + " es la contraseña correcta"
+			print "contraseña correcta"
 		except paramiko.AuthenticationException, error:
 			print "|!----[ERROR] incorrect password... root@" + ip + ":" + p
 			continue
