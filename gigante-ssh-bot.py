@@ -39,8 +39,8 @@ fichero = open("dic/password.txt", "r")
 passwords = fichero.readlines()
 
 #quita los saltos de linea
-for passwords in passwords:
-        passwords = passwords.strip()
+for p in passwords:
+        p = p.strip()
 
 class colores:
     HEADER = '\033[95m'
