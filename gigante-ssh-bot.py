@@ -38,10 +38,6 @@ fichero = open("dic/password.txt", "r")
 #guarda linea por linea incluyendo el salto de linea
 passwords = fichero.readlines()
 
-#quita los saltos de linea
-for p in passwords:
-        p = p.strip()
-
 class colores:
     HEADER = '\033[95m'
     azul = '\033[94m'
@@ -85,6 +81,10 @@ def check_sshBF(ip):
 	for p in passwords:
 		ssh = paramiko.SSHClient()
 		ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+		
+		#quita los saltos de linea
+        	p = p.strip()
+		
 		try:
 			print colores.verde + "|----[INFO] Try user: root password: " + p + colores.normal
 			ssh.connect(ip, username=user, password=p, timeout=10)
