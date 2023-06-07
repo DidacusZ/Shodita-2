@@ -31,7 +31,10 @@ client = MongoClient()
 db = client.test
 
 #passwords = ["123456", "root", "admin", "12345", "1234", "password", "qwerty", "1234567", "welcome", "qwerty", "football", "baseball", "1234567890", "anonymous", "abc123"]
-passwords = ["123456", "root","centos","password", "qwerty"]
+#passwords = ["123456", "root","centos","password", "qwerty"]
+
+fichero = open("dic/password.txt", "r")
+passwords = fichero.readlines()
 
 class colores:
     HEADER = '\033[95m'
