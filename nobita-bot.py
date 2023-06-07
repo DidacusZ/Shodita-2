@@ -177,12 +177,12 @@ def main():
     targets = f.readlines()
     
     for port in ports:
-    #quita los saltos de linea
-    port = port.strip()
-    #hacemos un casting al string para pasarlo a int
-    port = int(port)
-    #añade los int a la lista
-    portList.append(port)
+        #quita los saltos de linea
+        port = port.strip()
+        #hacemos un casting al string para pasarlo a int
+        port = int(port)
+        #añade los int a la lista
+        portList.append(port)
 
     for target in targets:
         target = target.strip()
