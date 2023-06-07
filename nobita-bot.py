@@ -38,10 +38,15 @@ from urlparse import urlparse
 #portList = [21,22,23,25,53,63,80,90,110,143,161,443,500,513,520,559,3306,3389,5000,5050, 5060, 8069,8080, 9443,27017, 28017]
 #portList = [21,22,23,25,53,63,80,90,110]
 
+portList = []
+
 #abre el fichero en modo lectura
 fichero = open("dic/ports.txt", "r")
 #guarda linea por linea incluyendo el salto de linea
-portList = fichero.readlines()
+ports = fichero.readlines()
+
+
+        	        
 
 totalPuertos = len(portList)
 ip_root = ""
@@ -170,6 +175,14 @@ def main():
     global portList, totalPuertos, ip_address
     f = open("dic/targets.txt", "r")
     targets = f.readlines()
+    
+    for port in ports:
+    #quita los saltos de linea
+    port = port.strip()
+    #hacemos un casting al string para pasarlo a int
+    port = int(port)
+    #añade los int a la lista
+    portList.append(port)
 
     for target in targets:
         target = target.strip()
@@ -181,12 +194,6 @@ def main():
                 print "----------------------------------------"
                 print "[INFO] Connecting to: " + str(ip_address)
                 for port in portList:
-                    
-                    #quita los saltos de linea
-        	        port = port.strip()
-                    #hacemos un casting al string para pasarlo a int
-                    port = int(port)
-                    
                     global _lastlocation
                     _lastlocation = ''
                     pct = str(porcentaje(portList.index(port)))
